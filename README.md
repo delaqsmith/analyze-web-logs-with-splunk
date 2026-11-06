@@ -102,15 +102,7 @@ The dataset contains three primary log sources:
 
 After ingestion, I confirmed that Splunk could search events from the web access, SSH authentication, and vendor sales logs.
 
-**Screenshot placeholder:**
-
-![Indexed Buttercup Games Events](screenshots/01-indexed-events.png)
-
-*Figure 1: Splunk search results displaying indexed Buttercup Games events.*
-
-### Security Relevance
-
-Correct log ingestion is a foundational SIEM requirement. Security investigations depend on having accessible, accurately indexed event data from relevant systems.
+<img width="878" height="445" alt="image" src="https://github.com/user-attachments/assets/59e46213-f02d-4345-9ec1-f8fe31f3f5bf" />
 
 ---
 
@@ -134,11 +126,8 @@ This search returns events containing terms that begin with `fail`, including va
 
 Locate potentially relevant failure events across the available log sources.
 
-**Screenshot placeholder:**
+<img width="874" height="338" alt="image" src="https://github.com/user-attachments/assets/27dd7d99-94cf-47f0-ad0c-cd231c89208f" />
 
-![Failure Keyword Search](screenshots/02-failure-keyword-search.png)
-
-*Figure 2: Events returned by the wildcard failure search.*
 
 ### Investigation B: Identifying HTTP 404 Errors
 
@@ -161,11 +150,7 @@ Repeated requests for nonexistent pages can be associated with:
 
 A 404 response alone is not evidence of malicious activity. Additional context, such as request frequency, URLs, and source IP addresses, is necessary.
 
-**Screenshot placeholder:**
-
-![HTTP 404 Search](screenshots/03-http-404-search.png)
-
-*Figure 3: Web log events containing HTTP 404 responses.*
+<img width="874" height="365" alt="image" src="https://github.com/user-attachments/assets/fa7107a9-8bb2-4467-9d51-96bc86cf1852" />
 
 ---
 
@@ -204,11 +189,8 @@ HTTP status codes can provide useful indicators:
 
 High concentrations of errors can help identify activity requiring investigation, although they can also result from normal application behavior.
 
-**Screenshot placeholder:**
+<img width="533" height="236" alt="image" src="https://github.com/user-attachments/assets/c2cbd857-dff0-488f-b0cb-43c33fc40dda" />
 
-![HTTP Status Code Statistics](screenshots/04-http-status-statistics.png)
-
-*Figure 4: Aggregated HTTP status code counts from Apache access logs.*
 
 ---
 
@@ -247,11 +229,7 @@ In a SOC environment, unusually high request counts may justify investigation fo
 
 However, high request volume alone does not establish malicious intent. Legitimate crawlers, proxies, and frequently used services can generate similar patterns.
 
-**Screenshot placeholder:**
-
-![Top Client IP Addresses](screenshots/05-top-client-ips.png)
-
-*Figure 5: Top ten client IP addresses ranked by web request volume.*
+<img width="879" height="261" alt="image" src="https://github.com/user-attachments/assets/6e467e34-6635-4747-8ec0-ed5c5e5746b0" />
 
 ---
 
@@ -282,11 +260,8 @@ A pattern of repeated failures may indicate:
 - Password guessing.
 - Potential brute-force activity.
 
-**Screenshot placeholder:**
+<img width="874" height="414" alt="image" src="https://github.com/user-attachments/assets/1f3b8017-10d7-493f-a9d5-c5599a998159" />
 
-![Failed SSH Login Events](screenshots/06-failed-ssh-events.png)
-
-*Figure 6: SSH authentication events containing failed password attempts.*
 
 ### Investigation B: Counting Failed Logins by Source IP
 
@@ -311,11 +286,7 @@ This is useful for investigating potential brute-force behavior and prioritizing
 
 Additional evidence, including timestamps, targeted accounts, successful logins, and known administrative activity, would be required to determine whether the failures represent an attack.
 
-**Screenshot placeholder:**
-
-![Failed Login Attempts by Source IP](screenshots/07-failed-logins-by-ip.png)
-
-*Figure 7: Failed SSH login attempts aggregated by source IP address.*
+<img width="875" height="334" alt="image" src="https://github.com/user-attachments/assets/e646301f-b68a-491d-aff8-b3014d16b1ac" />
 
 ---
 
@@ -360,9 +331,8 @@ Displays the total number of failed SSH login events within the selected time ra
 
 Provides a quick overview of authentication failures that may require closer investigation.
 
-![Failed Logins Dashboard Panel](screenshots/08-failed-logins-panel.png)
+<img width="850" height="120" alt="image" src="https://github.com/user-attachments/assets/33775727-2679-47eb-8791-b7fd30b78071" />
 
-*Figure 8: Single-value visualization displaying total failed login attempts.*
 
 ---
 
@@ -387,9 +357,8 @@ Ranks client IP addresses according to the number of web requests generated.
 
 Helps analysts identify high-volume traffic sources and prioritize unusual activity for further review.
 
-![Top Client IPs Dashboard Panel](screenshots/09-top-client-ips-panel.png)
+<img width="855" height="222" alt="image" src="https://github.com/user-attachments/assets/f3cde3b9-c03b-4a52-9ba3-42b47d76c7fb" />
 
-*Figure 9: Bar chart showing the ten most active client IP addresses.*
 
 ---
 
@@ -414,9 +383,8 @@ Helps analysts recognize which HTTP errors are most common and identify patterns
 
 The chart shows the **proportion of error events by status code**, rather than an overall HTTP error rate.
 
-![HTTP Error Distribution Dashboard Panel](screenshots/10-http-error-panel.png)
+<img width="851" height="224" alt="image" src="https://github.com/user-attachments/assets/ee4b36a9-5d65-487b-8a29-90387ecbe095" />
 
-*Figure 10: Pie chart displaying HTTP errors grouped by status code.*
 
 ---
 
@@ -432,11 +400,8 @@ The completed dashboard brings together three security indicators:
 
 Together, these panels provide a centralized view of authentication and web traffic activity within the sample dataset.
 
-**Final dashboard screenshot:**
+<img width="873" height="423" alt="image" src="https://github.com/user-attachments/assets/399a0c97-fe50-45d2-8c0b-a339ce8ed058" />
 
-![Completed Security Monitor Dashboard](screenshots/11-security-monitor-dashboard.png)
-
-*Figure 11: Completed Splunk Security Monitor dashboard.*
 
 ---
 
